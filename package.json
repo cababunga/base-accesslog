@@ -1,6 +1,6 @@
 {
   "name": "@cababunga/accesslog",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Accesslog middleware",
   "main": "accesslog.js",
   "scripts": {
