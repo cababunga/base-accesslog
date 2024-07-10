@@ -2,6 +2,7 @@
   "name": "@cababunga/accesslog",
   "version": "0.5.1",
   "description": "Accesslog middleware",
+  "main": "accesslog.js",
   "scripts": {
     "test": "mocha *.test.js",
     "bump": "npm version ${BUMP:=patch} && git push && git push --tags"
