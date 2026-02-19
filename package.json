@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cababunga/base-accesslog"
+    "url": "git+https://github.com/cababunga/base-accesslog.git"
   },
   "license": "ISC",
   "devDependencies": {
