@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": ".",
+    "noImplicitAny": true,
+    "module": "es2020",
+    "target": "es2015",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+  },
+  "include": ["*.ts"],
+  "exclude": ["node_modules"]
+}
