@@ -1,8 +1,8 @@
 "use strict";
 
-const assert = require("assert").strict;
+import assert from "assert/strict";
 
-const accesslog = require("./accesslog");
+import accesslog from "./accesslog.js";
 
 describe("Accesslog", () => {
     it("should render response time", () => {
@@ -15,6 +15,7 @@ describe("Accesslog", () => {
             headers: {},
         };
         const res = {
+            write() {},
             end() {},
         };
         accesslog(logger, {format: "{responseTime}"})(req, res);
@@ -30,6 +31,7 @@ describe("Accesslog", () => {
             session: {user_id: "123"},
         };
         const res = {
+            write() {},
             end() {},
         };
         accesslog(logger, {format: "{session.user_id}"})(req, res);
@@ -44,6 +46,7 @@ describe("Accesslog", () => {
             headers: {"content-type": "the value"},
         };
         const res = {
+            write() {},
             end() {},
         };
         accesslog(logger, {format: "{content-type}"})(req, res);
@@ -57,6 +60,7 @@ describe("Accesslog", () => {
             originalUrl: "/skip/it",
         };
         const res = {
+            write() {},
             end() {},
         };
         accesslog(logger, {skip: ["/skip/it"]})(req, res);
@@ -71,6 +75,7 @@ describe("Accesslog", () => {
             originalUrl: "/skip/it/not",
         };
         const res = {
+            write() {},
             end() {},
         };
         accesslog(logger, {format: "", skip: ["/skip/it"]})(req, res);
@@ -78,4 +83,3 @@ describe("Accesslog", () => {
         assert(called);
     });
 });
-
